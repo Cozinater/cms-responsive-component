@@ -51,6 +51,11 @@ h5 {
   font-size: 1rem; /* 16px */
 }
 
+label {
+  font-size: 1.1875rem;
+  color: var(--clr-light);
+}
+
 /* ------------------- */
 /* Utility classes     */
 /* ------------------- */
@@ -75,7 +80,7 @@ h5 {
 
 /* Defining common classes */
 .box-shadow-btm {
-  box-shadow: 0 0.125rem 0.125rem -0.125rem gray;
+  box-shadow: 0 0.125rem 0.125rem -0.125rem var(--clr-light);
 }
 
 .m-l-auto {
@@ -84,6 +89,23 @@ h5 {
 
 .m-t-auto {
   margin-top: auto;
+}
+
+/* Inputs */
+input {
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 0.125rem solid var(--clr-light);
+  padding: 0.5rem;
+}
+
+/* Dropdowns */
+select {
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 0.125rem solid var(--clr-light);
+  width: fit-content;
+  padding: 0.5rem;
 }
 
 body {
