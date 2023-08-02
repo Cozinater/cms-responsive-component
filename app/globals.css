@@ -111,4 +111,5 @@ select {
 body {
   color: black;
   background: var(--bodyBackground);
+  overflow: scroll;
 }

@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 export default function NavBar() {
   const router = useRouter();
   return (
-    <div className='h-24 flex box-shadow-btm bg-white'>
+    <div className='flex box-shadow-btm bg-white top-0 sticky' style={{ minHeight: '8rem' }}>
       <div className='max-w-5xl flex flex-grow items-center px-6 py-2 m-auto'>
         <button onClick={() => router.back()}>
           <BsArrowLeftCircle className='flex' size={32} />
