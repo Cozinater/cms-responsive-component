@@ -1,10 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import NavBar from '@/components/navBar';
+import { Nunito_Sans } from 'next/font/google';
+import NavBar from '@/components/NavBar';
 import ChildrenWrapper from '@/components/ChildWrapper';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Nunito_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',

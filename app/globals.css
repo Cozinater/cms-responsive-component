@@ -7,16 +7,19 @@
   margin: 0;
   padding: 0;
 
-  /* Defining common Vars */
+  /* Defining common vars */
   --bodyBackground: #628df229;
 
-  .box-shadow-btm {
-    box-shadow: 0 0.125rem 0.125rem -0.125rem gray;
-  }
+  /* colors */
+  --clr-dark: #272727;
+  --clr-light: #707070;
+  --clr-w: #ffffff;
 
-  .m-l-auto {
-    margin-left: auto;
-  }
+  --clr-pri-blue: #628df2;
+  --clr-sec-blue: #628df229;
+
+  --clr-pri-orange: #ff9757;
+  --clr-pri-orange: #ffa64d29;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -26,6 +29,47 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
+
+/* Defining font sizes */
+h1 {
+  font-size: 1.6875rem; /* 27px*/
+}
+
+h2 {
+  font-size: 1.5rem; /* 24px */
+}
+
+h3 {
+  font-size: 1.375rem; /* 22px */
+}
+
+h4 {
+  font-size: 1.1875rem; /* 19px */
+}
+
+h5 {
+  font-size: 1rem; /* 16px */
+}
+
+/* Defining font colors */
+.text-pri {
+  color: var(--clr-dark);
+}
+.text-sec {
+  color: var(--clr-light);
+}
+.text-white {
+  color: var(--clr-white);
+}
+
+/* Defining common classes */
+.box-shadow-btm {
+  box-shadow: 0 0.125rem 0.125rem -0.125rem gray;
+}
+
+.m-l-auto {
+  margin-left: auto;
+}
 
 body {
   color: black;
