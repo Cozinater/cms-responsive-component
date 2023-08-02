@@ -13,7 +13,7 @@
   /* colors */
   --clr-dark: #272727;
   --clr-light: #707070;
-  --clr-w: #ffffff;
+  --clr-white: #ffffff;
 
   --clr-pri-blue: #628df2;
   --clr-sec-blue: #628df229;
@@ -51,7 +51,11 @@ h5 {
   font-size: 1rem; /* 16px */
 }
 
-/* Defining font colors */
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* colors */
 .text-pri {
   color: var(--clr-dark);
 }
@@ -62,6 +66,13 @@ h5 {
   color: var(--clr-white);
 }
 
+.bg-pri {
+  background-color: var(--clr-pri-blue);
+}
+.bg-sec {
+  background-color: var(--clr-sec-blue);
+}
+
 /* Defining common classes */
 .box-shadow-btm {
   box-shadow: 0 0.125rem 0.125rem -0.125rem gray;
@@ -69,6 +80,10 @@ h5 {
 
 .m-l-auto {
   margin-left: auto;
+}
+
+.m-t-auto {
+  margin-top: auto;
 }
 
 body {

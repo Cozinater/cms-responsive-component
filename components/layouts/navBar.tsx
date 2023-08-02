@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function NavBar() {
   return (
     <div className='h-24 flex box-shadow-btm bg-white'>
-      <div className='max-w-5xl flex flex-grow items-center px-6 py-2'>
+      <div className='max-w-5xl flex flex-grow items-center px-6 py-2 m-auto'>
         <BsArrowLeftCircle className='flex' size={32} />
         <div className='flex gap-2 items-center m-l-auto'>
           <h4>Joanne</h4>

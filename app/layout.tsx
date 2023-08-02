@@ -1,10 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Nunito_Sans } from 'next/font/google';
-import NavBar from '@/components/NavBar';
-import ChildrenWrapper from '@/components/ChildWrapper';
+import NavBar from '@/components/layouts/NavBar';
+import ChildrenWrapper from '@/components/layouts/ChildWrapper';
 
-const inter = Nunito_Sans({ subsets: ['latin'] });
+const nunitoSans = Nunito_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className}`}>
+      <body className={`${nunitoSans.className} flex flex-col h-screen m-auto`}>
         <NavBar />
         <ChildrenWrapper>{children}</ChildrenWrapper>
       </body>

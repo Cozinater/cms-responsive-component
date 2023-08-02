@@ -17,6 +17,8 @@
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
     "postcss": "8.4.27",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.6.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",
