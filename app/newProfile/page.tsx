@@ -82,9 +82,9 @@ export default function NewProfile() {
             <td className='grid p-4'>
               <label>Gender</label>
               <select {...register('gender')}>
-                <option value='female'>female</option>
-                <option value='male'>male</option>
-                <option value='other'>other</option>
+                <option value='Female'>Female</option>
+                <option value='Male'>Male</option>
+                <option value='Other'>Other</option>
               </select>
               {errors.gender ? <div>{errors.gender.message}</div> : <div className='h-6'></div>}
             </td>
