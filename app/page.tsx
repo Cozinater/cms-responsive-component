@@ -4,8 +4,11 @@ import Card from '@/components/display/card';
 import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
+import useLocalStorage from '@/hooks/useLocalStorage';
 
 export default function Home() {
+  const [profileValues, setProfileValues] = useLocalStorage('profiles', {});
+  console.log(profileValues);
   return (
     <div className='p-8'>
       <div className='flex flex-grow items-center'>
@@ -18,8 +21,17 @@ export default function Home() {
         </Link>
       </div>
       <div className='m-4 grid gap-4'></div>
-      <Card name={'Tom'} gender={'Male'} age={'20'} email={'tom.tan123@gmail.com'} />
-      <Card name={'Tom'} gender={'Male'} age={'20'} email={'tom.tan123@gmail.com'} />
+      {Object.keys(profileValues).map((key: string) => {
+        return (
+          <Card
+            key={key}
+            name={profileValues[key].name}
+            gender={profileValues[key].gender}
+            age={profileValues[key].age}
+            email={profileValues[key].email}
+          />
+        );
+      })}
     </div>
   );
 }

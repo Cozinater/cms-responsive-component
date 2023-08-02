@@ -1,9 +1,11 @@
 'use client';
 
 import { Button } from 'primereact/button';
+import useLocalStorage from '@/hooks/useLocalStorage';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
-import { useForm, SubmitHandler, Controller } from 'react-hook-form';
-import { Dropdown } from 'primereact/dropdown';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { v4 as uuidv4 } from 'uuid';
+import { useRouter } from 'next/navigation';
 
 type Inputs = {
   name: string;
@@ -19,14 +21,26 @@ enum GenderEnum {
 }
 
 export default function NewProfile() {
+  // Get the value from local storage if it exists
+  const [profileValue, setProfileValue] = useLocalStorage('profiles', {});
+
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const id: string = uuidv4();
+    let profileObj = profileValue;
+
+    profileObj[id] = data;
+    setProfileValue(profileObj);
+    console.log(profileObj);
+    router.push('/');
+  };
 
   return (
     <div className='p-8'>
