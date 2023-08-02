@@ -1,8 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Nunito_Sans } from 'next/font/google';
-import NavBar from '@/components/layouts/NavBar';
-import ChildrenWrapper from '@/components/layouts/ChildWrapper';
+import NavBar from '@/components/layouts/navBar';
+import ChildrenWrapper from '@/components/layouts/childWrapper';
 
 const nunitoSans = Nunito_Sans({ subsets: ['latin'] });
 
