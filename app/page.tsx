@@ -22,18 +22,19 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-        <div className='m-4 grid gap-4'></div>
-        {Object.keys(profileValues || {}).map((key: string) => {
-          return (
-            <Card
-              key={key}
-              name={profileValues[key].name}
-              gender={profileValues[key].gender}
-              age={profileValues[key].age}
-              email={profileValues[key].email}
-            />
-          );
-        })}
+        <div className='m-4 grid gap-4 grid-cols'>
+          {Object.keys(profileValues || {}).map((key: string) => {
+            return (
+              <Card
+                key={key}
+                name={profileValues[key].name}
+                gender={profileValues[key].gender}
+                age={profileValues[key].age}
+                email={profileValues[key].email}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   };
